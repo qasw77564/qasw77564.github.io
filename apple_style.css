@@ -1,0 +1,70 @@
+.wwdc{
+    position: relative;
+    margin: 200px auto;
+}
+/*span預設不是block,故重新設置*/
+span{
+    display: block;
+    position: absolute;
+    width: 20em;
+    height: 20em;
+    /*計算讓物件置中,因一開始給予長寬為20em,則都減少10em(兩邊)*/
+    top:calc(50% - 10em);
+    left: :calc(50% - 10em);
+    
+}
+.spin{
+    animation: spin 10s linear infinite;
+}
+@keyframes spin{
+    0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+    /*另外一種方式也可以
+    100%{
+        transform: rotate(1turn);
+    }
+    */
+    
+}
+.large.circle{
+    width: 12.5em;
+    height: 12.5em;
+    /*陰影設置*/
+    box-shadow: 1em 1em 2em #333;
+    /*設置轉動之基準點*/
+    transform-origin: 50% 12.5em;
+    position: absolute;
+}
+.circle{
+    border-radius: 50%;
+    left: calc(50% - 6.25em);
+    top:calc(50% - 12.5em);
+}
+.one{
+    transform: rotateZ(225deg);
+}
+.two{
+    transform: rotateZ(180deg);
+}
+.three{
+    transform: rotateZ(135deg);
+}
+.four{
+    transform: rotateZ(90deg);
+}
+.five{
+    transform: rotateZ(45deg);
+}
+.six{
+    transform: rotateZ(0);
+}
+.seven{
+    transform: rotateZ(-45deg);
+}
+.eight{
+    transform: rotateZ(-90deg);
+}

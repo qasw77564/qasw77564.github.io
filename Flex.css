@@ -1,0 +1,112 @@
+.red {
+    background: red;
+}
+
+.blue {
+    background: blue;
+}
+
+.green {
+    background: green;
+}
+
+.yellow {
+    background: yellow;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.container {
+    height: 700px;
+    display: flex;
+    /*多行對齊*/
+    align-content: center;
+    /*單行對齊*/
+    /*    align-items: center;*/
+    /*軸 橫軸、縱軸*/
+    flex-direction: row;
+    /*換行*/
+    flex-wrap: wrap;
+    /*主軸對齊*/
+    justify-content: space-around;
+    /*軸＆換行簡寫*/
+    /*    flex-flow: row wrap;*/
+    margin: 0 auto;
+    /*如限制寬度，加max-width就可以做到RWD功能*/
+}
+
+.item {
+    font-size: 50px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #ffff;
+    /*每個Item依照20%去分*/
+    /*flex-basis: 20%;*/
+    /*grow 1 */
+    flex: 0 0 33.3333%;
+    /*最大寬度50%*/
+    max-width: 100%;
+}
+
+.container-v {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.darkgoldenrod {
+    background-color: darkgoldenrod;
+}
+
+.aqua {
+    background-color: aqua;
+}
+
+.brown {
+    background-color: brown;
+}
+
+@media (min-width:500px) {
+    .blue {
+        background: red;
+    }
+}
+
+@media (max-width:768px) {
+    .container {
+        height: 700px;
+        display: flex;
+        /*多行對齊*/
+        align-content: center;
+        /*單行對齊*/
+/*            align-items: center;*/
+        /*軸 橫軸、縱軸*/
+        flex-direction: row;
+        /*換行*/
+        flex-wrap: wrap;
+        /*主軸對齊*/
+        justify-content: space-around;
+        /*軸＆換行簡寫*/
+        /*    flex-flow: row wrap;*/
+        margin: 0 auto;
+        /*如限制寬度，加max-width就可以做到RWD功能*/
+    }
+    .item{
+        flex:0 0 100%;
+    }
+    
+}
+@media (min-width:768px){
+    .container-v{
+        display: none;
+    }
+}
+@media (min-width:900px) {
+    .blue {
+        background: black;
+    }
+}
